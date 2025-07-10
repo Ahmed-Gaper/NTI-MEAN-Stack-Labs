@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <title>Enhanced Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator-container {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            background-color: #e9e9e9;
+        }
+
+        #Answer {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 15px;
+            font-size: 2em;
+            text-align: right;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #fdfdfd;
+        }
+
+        .width {
+            width: 60px;
+            height: 60px;
+            font-size: 1.2em;
+            margin: 2px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            transition: background-color 0.2s;
+        }
+
+        .width:hover {
+            background-color: #dcdcdc;
+        }
+
+        .operator {
+            background-color: #f9a825;
+            color: white;
+        }
+
+        .operator:hover {
+            background-color: #f57f17;
+        }
+        
+        .equal-sign {
+            background-color: #43a047;
+            color: white;
+        }
+        
+        .equal-sign:hover {
+            background-color: #388e3c;
+        }
+
+        #td {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333;
+            font-size: 1em;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator-container">
+        <table border="0" cellspacing="5" cellpadding="5">
+            <tr>
+                <td colspan="4" id="td"> JavaScript Calculator </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input id="Answer" type="text">
+                </td>
+                <td>
+                    <input type="button" class="width equal-sign" value="=" onclick="EnterEqual()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="width" value="1" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width" value="2" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width" value="3" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width operator" value="+" onclick="EnterOperator(this.value)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="width" value="4" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width" value="5" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width" value="6" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width operator" value="-" onclick="EnterOperator(this.value)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="width" value="7" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width" value="8" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width" value="9" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width operator" value="*" onclick="EnterOperator(this.value)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="width" value="C" onclick="EnterClear()">
+                </td>
+                <td>
+                    <input type="button" class="width" value="0" onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width" value="." onclick="EnterNumber(this.value)">
+                </td>
+                <td>
+                    <input type="button" class="width operator" value="/" onclick="EnterOperator(this.value)">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="calculator.js"></script>
+
+</body>
+
+</html>
